@@ -1,0 +1,89 @@
+/*
+ * @file
+ * Provides the layout styles for two-column-bricks layout section.
+ */
+/* line 10, ids/modules/ids_layout/layouts/twocol_bricks/sass/twocol-bricks.scss */
+.layout--twocol-bricks__row {
+  margin-bottom: 50px;
+}
+
+/* line 13, ids/modules/ids_layout/layouts/twocol_bricks/sass/twocol-bricks.scss */
+.layout--twocol-bricks__row:last-child {
+  margin-bottom: 0;
+}
+
+/* line 18, ids/modules/ids_layout/layouts/twocol_bricks/sass/twocol-bricks.scss */
+.layout--twocol-bricks__region {
+  margin-bottom: 30px;
+}
+
+/* line 21, ids/modules/ids_layout/layouts/twocol_bricks/sass/twocol-bricks.scss */
+.layout--twocol-bricks__region:last-child {
+  margin-bottom: 0;
+}
+
+/* line 25, ids/modules/ids_layout/layouts/twocol_bricks/sass/twocol-bricks.scss */
+.layout--twocol-bricks__region > * {
+  margin-bottom: 30px;
+}
+
+/* line 28, ids/modules/ids_layout/layouts/twocol_bricks/sass/twocol-bricks.scss */
+.layout--twocol-bricks__region > *:last-child {
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 40em) {
+  /* line 35, ids/modules/ids_layout/layouts/twocol_bricks/sass/twocol-bricks.scss */
+  .layout--twocol-bricks__row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    margin: -15px -15px calc(50px - 15px);
+  }
+  /* line 41, ids/modules/ids_layout/layouts/twocol_bricks/sass/twocol-bricks.scss */
+  .layout--twocol-bricks__region {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 100%;
+    flex: 0 1 100%;
+  }
+  /* line 45, ids/modules/ids_layout/layouts/twocol_bricks/sass/twocol-bricks.scss */
+  .layout--twocol-bricks__region, .layout--twocol-bricks__region:last-child {
+    margin: 15px 15px;
+  }
+  /* line 51, ids/modules/ids_layout/layouts/twocol_bricks/sass/twocol-bricks.scss */
+  .layout--twocol-bricks__region--col-50 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 50%;
+    flex: 0 1 50%;
+  }
+  /* line 55, ids/modules/ids_layout/layouts/twocol_bricks/sass/twocol-bricks.scss */
+  .layout--twocol-bricks__region--col-33 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 33%;
+    flex: 0 1 33%;
+  }
+  /* line 59, ids/modules/ids_layout/layouts/twocol_bricks/sass/twocol-bricks.scss */
+  .layout--twocol-bricks__region--col-67 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 67%;
+    flex: 0 1 67%;
+  }
+  /* line 63, ids/modules/ids_layout/layouts/twocol_bricks/sass/twocol-bricks.scss */
+  .layout--twocol-bricks__region--col-25 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 25%;
+    flex: 0 1 25%;
+  }
+  /* line 67, ids/modules/ids_layout/layouts/twocol_bricks/sass/twocol-bricks.scss */
+  .layout--twocol-bricks__region--col-75 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 75%;
+    flex: 0 1 75%;
+  }
+}

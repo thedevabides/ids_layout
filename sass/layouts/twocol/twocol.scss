@@ -1,0 +1,35 @@
+/*
+ * @file
+ * Provides the layout styles for two-column layout section.
+ */
+@media screen and (min-width: 40em) {
+  .layout--twocol > .layout__row {
+    display: flex;
+    flex-flow: row wrap;
+
+    > .layout__region {
+      box-sizing: border-box;
+      flex: 0 0 100%;
+
+      &.layout__region--col-50 {
+        flex-basis: 50%;
+      }
+
+      &.layout__region--col-33 {
+        flex-basis: 33.3333%;
+      }
+
+      &.layout__region--col-66 {
+        flex-basis: 0 0 66.6666%;
+      }
+
+      &.layout__region--col-25 {
+        flex-basis: 0 0 25%;
+      }
+
+      &.layout__region--col-75 {
+        flex-basis: 0 0 75%;
+      }
+    }
+  }
+}

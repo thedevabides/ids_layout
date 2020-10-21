@@ -1,0 +1,77 @@
+/*
+ * @file
+ * Provides the layout styles for two-column-bricks layout section.
+ */
+/* line 6, ids/modules/ids_layout/layouts/twocol_bricks/sass/twocol_bricks.scss */
+.layout--twocol-bricks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+/* line 10, ids/modules/ids_layout/layouts/twocol_bricks/sass/twocol_bricks.scss */
+.layout--twocol-bricks > .layout__region {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 100%;
+  flex: 0 1 100%;
+}
+
+@media screen and (min-width: 40em) {
+  /* line 16, ids/modules/ids_layout/layouts/twocol_bricks/sass/twocol_bricks.scss */
+  .layout--twocol-bricks {
+    margin: -25px -15px;
+  }
+  /* line 19, ids/modules/ids_layout/layouts/twocol_bricks/sass/twocol_bricks.scss */
+  .layout--twocol-bricks > .layout__region {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 25px 15px;
+  }
+  /* line 24, ids/modules/ids_layout/layouts/twocol_bricks/sass/twocol_bricks.scss */
+  .layout--twocol-bricks.layout--twocol-bricks--above--50-50 > .layout__region--first-above,
+  .layout--twocol-bricks.layout--twocol-bricks--above--50-50 > .layout__region--second-above,
+  .layout--twocol-bricks.layout--twocol-bricks--below--50-50 > .layout__region--first-above,
+  .layout--twocol-bricks.layout--twocol-bricks--below--50-50 > .layout__region--second-above {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 50%;
+    flex: 0 1 50%;
+  }
+  /* line 31, ids/modules/ids_layout/layouts/twocol_bricks/sass/twocol_bricks.scss */
+  .layout--twocol-bricks.layout--twocol-bricks--above--33-67 > .layout__region--first-above,
+  .layout--twocol-bricks.layout--twocol-bricks--above--67-33 > .layout__region--second-above,
+  .layout--twocol-bricks.layout--twocol-bricks--below--33-67 > .layout__region--first-below,
+  .layout--twocol-bricks.layout--twocol-bricks--below--67-33 > .layout__region--second-below {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 33%;
+    flex: 0 1 33%;
+  }
+  /* line 38, ids/modules/ids_layout/layouts/twocol_bricks/sass/twocol_bricks.scss */
+  .layout--twocol-bricks.layout--twocol-bricks--above--67-33 > .layout__region--first-above,
+  .layout--twocol-bricks.layout--twocol-bricks--above--33-67 > .layout__region--second-above,
+  .layout--twocol-bricks.layout--twocol-bricks--below--67-33 > .layout__region--first-below,
+  .layout--twocol-bricks.layout--twocol-bricks--below--33-67 > .layout__region--second-below {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 67%;
+    flex: 0 1 67%;
+  }
+  /* line 45, ids/modules/ids_layout/layouts/twocol_bricks/sass/twocol_bricks.scss */
+  .layout--twocol-bricks.layout--twocol-bricks--above--25-75 > .layout__region--first-above,
+  .layout--twocol-bricks.layout--twocol-bricks--above--75-25 > .layout__region--second-above,
+  .layout--twocol-bricks.layout--twocol-bricks--below--25-75 > .layout__region--first-below,
+  .layout--twocol-bricks.layout--twocol-bricks--below--75-25 > .layout__region--second-below {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 25%;
+    flex: 0 1 25%;
+  }
+  /* line 52, ids/modules/ids_layout/layouts/twocol_bricks/sass/twocol_bricks.scss */
+  .layout--twocol-bricks.layout--twocol-bricks--above--75-25 > .layout__region--first-above,
+  .layout--twocol-bricks.layout--twocol-bricks--above--25-75 > .layout__region--second-above,
+  .layout--twocol-bricks.layout--twocol-bricks--below--75-25 > .layout__region--first-below,
+  .layout--twocol-bricks.layout--twocol-bricks--below--25-75 > .layout__region--second-below {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 75%;
+    flex: 0 1 75%;
+  }
+}

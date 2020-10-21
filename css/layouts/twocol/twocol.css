@@ -1,0 +1,49 @@
+/*
+ * @file
+ * Provides the layout styles for two-column layout section.
+ */
+@media screen and (min-width: 40em) {
+  /* line 6, ids/modules/ids_layout/sass/layouts/twocol/twocol.scss */
+  .layout--twocol > .layout__row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+  }
+  /* line 10, ids/modules/ids_layout/sass/layouts/twocol/twocol.scss */
+  .layout--twocol > .layout__row > .layout__region {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+  }
+  /* line 14, ids/modules/ids_layout/sass/layouts/twocol/twocol.scss */
+  .layout--twocol > .layout__row > .layout__region.layout__region--col-50 {
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+  }
+  /* line 18, ids/modules/ids_layout/sass/layouts/twocol/twocol.scss */
+  .layout--twocol > .layout__row > .layout__region.layout__region--col-33 {
+    -ms-flex-preferred-size: 33.3333%;
+    flex-basis: 33.3333%;
+  }
+  /* line 22, ids/modules/ids_layout/sass/layouts/twocol/twocol.scss */
+  .layout--twocol > .layout__row > .layout__region.layout__region--col-66 {
+    -ms-flex-preferred-size: 0 0 66.6666%;
+    flex-basis: 0 0 66.6666%;
+  }
+  /* line 26, ids/modules/ids_layout/sass/layouts/twocol/twocol.scss */
+  .layout--twocol > .layout__row > .layout__region.layout__region--col-25 {
+    -ms-flex-preferred-size: 0 0 25%;
+    flex-basis: 0 0 25%;
+  }
+  /* line 30, ids/modules/ids_layout/sass/layouts/twocol/twocol.scss */
+  .layout--twocol > .layout__row > .layout__region.layout__region--col-75 {
+    -ms-flex-preferred-size: 0 0 75%;
+    flex-basis: 0 0 75%;
+  }
+}

@@ -1,0 +1,19 @@
+layout_plugin.settings.ids_layout_twocol_bricks:
+  type: layout_plugin.settings
+  mapping:
+    above_widths:
+      type: string
+    below_widths:
+      type: string
+
+layout_plugin.settings.ids_layout_twocol:
+  type: layout_plugin.settings
+  mapping:
+    column_widths:
+      type: string
+
+layout_plugin.settings.ids_layout_float_column:
+  type: layout_plugin.settings
+  mapping:
+    column_width:
+      type: string

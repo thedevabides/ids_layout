@@ -1,0 +1,5 @@
+name: "IDHW Layouts"
+type: 'module'
+package: 'IDS'
+description: 'IDS layout builder/dismae layouts module.'
+core_version_requirement: ^8.9 || ^9

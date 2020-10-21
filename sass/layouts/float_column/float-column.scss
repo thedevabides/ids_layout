@@ -1,0 +1,42 @@
+/*
+ * @file
+ * Provides the layout styles for floated-right-column layout section.
+ */
+.layout--float-column {
+  @media screen and (min-width: 40em) {
+    > .layout__row {
+      > .layout__region--float-right {
+        float: right;
+        min-width: 25%;
+      }
+
+      > .layout-region--col-25 { width: 25%; }
+      > .layout-region--col-33 { width: 33%; }
+      > .layout-region--col-50 { width: 50%; }
+    }
+
+    // For layout builder admin.
+    &.layout-builder__layout {
+
+      > .layout__row {
+        display: flex;
+        flex-flow: row nowrap;
+
+        // Fill the space
+        > .layout__region--second {
+          flex: 1 1 auto;
+          order: 1
+        }
+
+        > .layout__region--float-right {
+          float: none;
+          order: 2;
+        }
+
+        > .layout-region--col-25 { flex: 0 0 25%; }
+        > .layout-region--col-33 { flex: 0 0 33%; }
+        > .layout-region--col-50 { flex: 0 0 50%; }
+      }
+    }
+  }
+}

@@ -1,0 +1,64 @@
+ids_layout_twocol:
+  label: 'IDHW - Two column'
+  description: 'Two column layout with configurable column widths'
+  path: layouts/twocol
+  template: layout--twocol
+  library: ids_layout/twocol
+  class: '\Drupal\ids_layout\Plugin\Layout\TwoColumnLayout'
+  category: 'IDHW Layouts'
+  default_region: first
+  icon_map:
+    - [first, second]
+  regions:
+    first:
+      label: 'First column'
+    second:
+      label: 'Second column'
+
+ids_layout_float_column:
+  label: 'IDHW - Floated right column'
+  description: 'Two column layout with right column floated'
+  path: layouts/float_column
+  template: layout--float-column
+  library: ids_layout/float_column
+  class: '\Drupal\ids_layout\Plugin\Layout\FloatColumnLayout'
+  category: 'IDHW Layouts'
+  default_region: first
+  icon_map:
+    - [first, second]
+  regions:
+    first:
+      label: 'First column'
+    second:
+      label: 'Second column'
+
+ids_layout_twocol_bricks:
+  label: 'IDHW - Two column bricks'
+  description: '`Brick` style layout with configurable column widths per row'
+  path: layouts/twocol_bricks
+  template: layout--twocol-bricks
+  library: ids_layout/twocol_bricks
+  class: '\Drupal\ids_layout\Plugin\Layout\TwoColumnBricksLayout'
+  category: 'IDHW Layouts'
+  default_region: first_above
+  icon_map:
+    - [top]
+    - [first_above, second_above]
+    - [middle]
+    - [first_below, second_below]
+    - [bottom]
+  regions:
+    top:
+      label: Top
+    first_above:
+      label: 'First column above'
+    second_above:
+      label: 'Second column above'
+    middle:
+      label: Middle
+    first_below:
+      label: 'First column below'
+    second_below:
+      label: 'Second column below'
+    bottom:
+      label: Bottom

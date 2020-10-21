@@ -1,0 +1,35 @@
+/*
+ * @file
+ * Provides the layout styles for two-column-bricks layout section.
+ */
+@media screen and (min-width: 40em) {
+  .layout--twocol-bricks > .layout__row {
+    display: flex;
+    flex-flow: row wrap;
+
+    > .layout__region {
+      box-sizing: border-box;
+      flex: 0 0 100%;
+
+      &.layout__region--col-50 {
+        flex-basis: 50%;
+      }
+
+      &.layout__region--col-33 {
+        flex-basis: 33%;
+      }
+
+      &.layout__region--col-67 {
+        flex-basis: 67%;
+      }
+
+      &.layout__region--col-25 {
+        flex-basis: 25%;
+      }
+
+      &.layout__region--col-75 {
+        flex-basis: 75%;
+      }
+    }
+  }
+}

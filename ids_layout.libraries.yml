@@ -1,0 +1,18 @@
+# Layout libraries
+twocol:
+  has_dev: true
+  css:
+    theme:
+      css/layouts/twocol/twocol.min.css: { minified: true }
+
+float_column:
+  has_dev: true
+  css:
+    theme:
+      css/layouts/float_column/float-column.min.css: { minified: true }
+
+twocol_bricks:
+  has_dev: true
+  css:
+    theme:
+      css/layouts/twocol_bricks/twocol-bricks.min.css: { minified: true }

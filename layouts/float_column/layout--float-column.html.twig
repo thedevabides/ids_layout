@@ -1,0 +1,77 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a two-column layout with a floated
+ * right column.
+ *
+ * Available variables:
+ * - content: The content for this layout.
+ * - attributes: HTML attributes for the layout <div>.
+ *
+ * @ingroup themeable
+ */
+#}
+{% if content %}
+  {% set cssClassBase = 'layout--float-column' %}
+  {% set rowCssClass = cssClassBase ~ '__row' %}
+  {% set regionCssClass = cssClassBase ~ '__region' %}
+  {% set generalizedCssClassBase = 'layout' %}
+  {% set generalizedRowCssClass = generalizedCssClassBase ~ '__row' %}
+  {% set generalizedRegionCssClass = generalizedCssClassBase ~ '__region' %}
+  {%
+    set classes = [
+      generalizedCssClassBase,
+      cssClassBase,
+    ]
+  %}
+  <div{{ attributes.addClass(classes) }}>
+
+    {% if content.first is not element_empty or content.second %}
+      {# Set up row attributes. #}
+      {% set row_attr = create_attribute().addClass([
+        generalizedRowCssClass,
+        rowCssClass,
+      ]) %}
+      <div{{ row_attr }}>
+
+        {% if content.first is not element_empty %}
+          {# Set up first region attributes. #}
+          {% set first_region_attr = create_attribute() %}
+          {% if region_attributes.first %}
+            {% set first_region_attr = region_attributes.first %}
+          {% endif %}
+          {% set first_region_attr = first_region_attr.addClass([
+            generalizedRegionCssClass,
+            generalizedRegionCssClass ~ '--first',
+            generalizedRegionCssClass ~ '--float-right',
+            regionCssClass,
+            regionCssClass ~ '--first',
+            regionCssClass ~ '--float-right',
+          ]) %}
+          <div{{ first_region_attr }}>
+            {{ content.first }}
+          </div>
+        {% endif %}
+
+        {% if content.second %}
+          {# Set up second region attributes. #}
+          {% set second_region_attr = create_attribute() %}
+          {% if region_attributes.second %}
+            {% set second_region_attr = region_attributes.second %}
+          {% endif %}
+          {% set second_region_attr = second_region_attr.addClass([
+            generalizedRegionCssClass,
+            generalizedRegionCssClass ~ '--second',
+            regionCssClass,
+            regionCssClass ~ '--second',
+          ]) %}
+          <div{{ second_region_attr }}>
+            {{ content.second }}
+          </div>
+        {% endif %}
+
+      </div>
+    {% endif %}
+
+  </div>
+{% endif %}

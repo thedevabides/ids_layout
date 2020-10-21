@@ -1,0 +1,195 @@
+{#
+/**
+ * @file
+ * Default theme implementation for a two column layout.
+ *
+ * This template provides a two column display layout with full width areas at
+ * the top, bottom and in the middle.
+ *
+ * Available variables:
+ * - content: The content for this layout.
+ * - attributes: HTML attributes for the layout <div>.
+ *
+ * Based on @see core/themes/stable/templates/layout/layout--twocol-bricks.html.twig
+ *
+ * @ingroup themeable
+ */
+#}
+{% if content %}
+  {% set cssClassBase = 'layout--twocol-bricks' %}
+  {% set rowCssClass = cssClassBase ~ '__row' %}
+  {% set regionCssClass = cssClassBase ~ '__region' %}
+  {% set generalizedCssClassBase = 'layout' %}
+  {% set generalizedRowCssClass = generalizedCssClassBase ~ '__row' %}
+  {% set generalizedRegionCssClass = generalizedCssClassBase ~ '__region' %}
+  {%
+    set classes = [
+      generalizedCssClassBase,
+      cssClassBase,
+    ]
+  %}
+  <div{{ attributes.addClass(classes) }}>
+    {% if content.top %}
+      {# Set up top row attributes. #}
+      {% set top_row_attr = create_attribute().addClass([
+        generalizedRowCssClass,
+        rowCssClass,
+        rowCssClass ~ '--top',
+      ]) %}
+      <div{{ top_row_attr }}>
+        {# Set up top region attributes. #}
+        {% set top_region_attr = create_attribute() %}
+        {% if region_attributes.top %}
+          {% set top_region_attr = region_attributes.top %}
+        {% endif %}
+        {% set top_region_attr = top_region_attr.addClass([
+          generalizedRegionCssClass,
+          generalizedRegionCssClass ~ '--top',
+          regionCssClass,
+          regionCssClass ~ '--top',
+        ]) %}
+        <div {{ top_region_attr }}>
+          {{ content.top }}
+        </div>
+      </div>
+    {% endif %}
+
+    {% if content.first_above or content.second_above %}
+      {# Set up above row attributes. #}
+      {% set above_row_attr = create_attribute().addClass([
+        generalizedRowCssClass,
+        rowCssClass,
+        rowCssClass ~ '--above',
+      ]) %}
+      <div{{ above_row_attr }}>
+        {% if content.first_above %}
+          {# Set up first_above region attributes. #}
+          {% set first_above_region_attr = create_attribute() %}
+          {% if region_attributes.first_above %}
+            {% set first_above_region_attr = region_attributes.first_above %}
+          {% endif %}
+          {% set first_above_region_attr = first_above_region_attr.addClass([
+            generalizedRegionCssClass,
+            generalizedRegionCssClass ~ '--first-above',
+            regionCssClass,
+            regionCssClass ~ '--first-above',
+          ]) %}
+          <div{{ first_above_region_attr }}>
+            {{ content.first_above }}
+          </div>
+        {% endif %}
+
+        {% if content.second_above %}
+          {# Set up second_above region attributes. #}
+          {% set second_above_region_attr = create_attribute() %}
+          {% if region_attributes.second_above %}
+            {% set second_above_region_attr = region_attributes.second_above %}
+          {% endif %}
+          {% set second_above_region_attr = second_above_region_attr.addClass([
+            generalizedRegionCssClass,
+            generalizedRegionCssClass ~ '--second-above',
+            regionCssClass,
+            regionCssClass ~ '--second-above',
+          ]) %}
+          <div{{ second_above_region_attr }}>
+            {{ content.second_above }}
+          </div>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    {% if content.middle %}
+      {# Set up middle row attributes. #}
+      {% set middle_row_attr = create_attribute().addClass([
+        generalizedRowCssClass,
+        rowCssClass,
+        rowCssClass ~ '--middle',
+      ]) %}
+      <div{{ middle_row_attr }}>
+        {# Set up middle region attributes. #}
+        {% set middle_region_attr = create_attribute() %}
+        {% if region_attributes.middle %}
+          {% set middle_region_attr = region_attributes.middle %}
+        {% endif %}
+        {% set middle_region_attr = middle_region_attr.addClass([
+          generalizedRegionCssClass,
+          generalizedRegionCssClass ~ '--middle',
+          regionCssClass,
+          regionCssClass ~ '--middle',
+        ]) %}
+        <div{{ middle_region_attr }}>
+          {{ content.middle }}
+        </div>
+      </div>
+    {% endif %}
+
+    {% if content.first_below or content.second_below %}
+      {# Set up below row attributes. #}
+      {% set below_row_attr = create_attribute().addClass([
+        generalizedRowCssClass,
+        rowCssClass,
+        rowCssClass ~ '--below',
+      ]) %}
+      <div{{ below_row_attr }}>
+        {% if content.first_below %}
+          {# Set up first_below region attributes. #}
+          {% set first_below_region_attr = create_attribute() %}
+          {% if region_attributes.first_below %}
+            {% set first_below_region_attr = region_attributes.first_below %}
+          {% endif %}
+          {% set first_below_region_attr = first_below_region_attr.addClass([
+            generalizedRegionCssClass,
+            generalizedRegionCssClass ~ '--first-below',
+            regionCssClass,
+            regionCssClass ~ '--first-below',
+          ]) %}
+          <div{{ first_below_region_attr }}>
+            {{ content.first_below }}
+          </div>
+        {% endif %}
+
+        {% if content.second_below %}
+          {# Set up second_below region attributes. #}
+          {% set second_below_region_attr = create_attribute() %}
+          {% if region_attributes.second_below %}
+            {% set second_below_region_attr = region_attributes.second_below %}
+          {% endif %}
+          {% set second_below_region_attr = second_below_region_attr.addClass([
+            generalizedRegionCssClass,
+            generalizedRegionCssClass ~ '--second-below',
+            regionCssClass,
+            regionCssClass ~ '--second-below',
+          ]) %}
+          <div{{ second_below_region_attr }}>
+            {{ content.second_below }}
+          </div>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    {% if content.bottom %}
+      {# Set up bottom row attributes. #}
+      {% set bottom_row_attr = create_attribute().addClass([
+        generalizedRowCssClass,
+        rowCssClass,
+        rowCssClass ~ '--bottom',
+      ]) %}
+      <div{{ bottom_row_attr }}>
+        {# Set up bottom region attributes. #}
+        {% set bottom_region_attr = create_attribute() %}
+        {% if region_attributes.bottom %}
+          {% set bottom_region_attr = region_attributes.bottom %}
+        {% endif %}
+        {% set bottom_region_attr = bottom_region_attr.addClass([
+          generalizedRegionCssClass,
+          generalizedRegionCssClass ~ '--bottom',
+          regionCssClass,
+          regionCssClass ~ '--bottom',
+        ]) %}
+        <div{{ bottom_region_attr }}>
+          {{ content.bottom }}
+        </div>
+      </div>
+    {% endif %}
+  </div>
+{% endif %}
